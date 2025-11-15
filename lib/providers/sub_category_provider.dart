@@ -39,18 +39,4 @@ class SubCategoryProvider extends ChangeNotifier {
     isLoading = false;
     notifyListeners();
   }
-
-  /// Returns the subcategory name by ID
-  String getSubCategoryName(int subCategoryId) {
-    try {
-      final sub = subcategories.firstWhere(
-            (e) => e['id'] == subCategoryId,
-        orElse: () => null,
-      );
-
-      return sub != null ? (sub['name'] ?? '') : '';
-    } catch (_) {
-      return '';
-    }
-  }
 }

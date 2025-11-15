@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:qna01/providers/sub_category_provider.dart';
-
 import '../providers/question_provider.dart';
 import '../providers/auth_provider.dart';
 import 'report_page.dart';
@@ -32,7 +30,6 @@ class _QuestionPageState extends State<QuestionPage> {
   @override
   Widget build(BuildContext context) {
     final qp = Provider.of<QuestionProvider>(context);
-    final subProvider = Provider.of<SubCategoryProvider>(context);
 
 
     if (qp.isLoading) {
